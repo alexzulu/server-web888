@@ -56,7 +56,7 @@ run the following commands to install the build tools
 4. Inside the virtual enviroment, it is like a normal linux. You can use git to enlist the code, update submodules and use cmake to build the binary.
 ```
 # cd /root
-# git clone https://github.com/raspsdr/server
+# git clone https://github.com/alexzulu/server-web888
 # cd server
 # git submodule update --init
 # mkdir build
