@@ -9947,7 +9947,7 @@ function test_audio_suspended()
          w3_div('id-play-button-container class-overlay-container||onclick="play_button()"',
             w3_div('id-play-button',
                '<img src="gfx/openwebrx-play-button.png" width="150" height="150" /><br><br>' +
-               (kiwi_isMobile()? 'Tap to':'Click to') +' start OpenWebRX'
+               (kiwi_isMobile()? 'Tap to':'Click to') +' start Web-888'
             )
          );
       w3_create_appendElement('id-kiwi-body', 'div', s);
