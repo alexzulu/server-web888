@@ -9437,7 +9437,7 @@ function ident_init()
 
 	ident_user = ident;
 	send_ident = true;
-	//console.log('ident_init: SET ident='+ ident_user);
+	console.log('ident_init: SET ident='+ ident_user);
 }
 
 function ident_complete(from, which)
