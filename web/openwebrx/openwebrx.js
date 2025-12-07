@@ -173,6 +173,7 @@ var force_mobile = false;
 var mobile_laptop_test = false;
 var user_url = null;
 var url_1Hz = null;
+var Ident; // User idrnt from cookie
 
 var wf_rates = { '0':0, 'off':0, '1':1, '1hz':1, 's':2, 'slow':2, 'm':3, 'med':3, 'f':4, 'fast':4 };
 
@@ -228,6 +229,8 @@ function kiwi_main_ready()
 	override_9_10 = parseFloat(readCookie('last_9_10'));
 	override_max_dB = parseFloat(readCookie('last_max_dB'));
 	override_min_dB = parseFloat(readCookie('last_min_dB'));
+   ident = readCookie('ident'); // Read user ident from cookie
+   console.log('ident= ' + ident);
 	
 	var last_vol = readCookie('last_volume', 50);
    //console.log('last_vol='+ last_vol);
@@ -9422,11 +9425,13 @@ function ident_init()
       user_url = kiwi_strip_tags(user_url, '').substring(0, len);
       writeCookie('ident', user_url);
    }
-	var ident = initCookie('ident', '');
-   ident = kiwi_strip_tags(ident, '').substring(0, len);
-	//console.log('ident PRE ident_user=<'+ ident +'> ident_len='+ len);
-	ident = kiwi_strip_tags(ident, '').substring(0, len);
-	//console.log('ident POST ident_user=<'+ ident +'> ident_len='+ len);
+   if(!ident){
+	   ident = initCookie('ident', '');
+      ident = kiwi_strip_tags(ident, '').substring(0, len);
+	   console.log('ident PRE ident_user=<'+ ident +'> ident_len='+ len);
+	   ident = kiwi_strip_tags(ident, '').substring(0, len);
+	   console.log('ident POST ident_user=<'+ ident +'> ident_len='+ len);
+   }
 
 	var el = w3_el('id-ident-input1');
 	var el2 = w3_el('id-ident-input2');
