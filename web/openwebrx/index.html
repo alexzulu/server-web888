@@ -163,6 +163,14 @@ This file is part of OpenWebRX.
         <div class="splash">
             <h1 class = "splash-header">Welcome to my WEB-888!!!</h1>
         </div>
-        <script src="app.js"></script>
+        <script>
+            var splashScreen = document.querySelector('.splash');
+            splashScreen.addEventListener('click',()=>{
+                splashScreen.style.opacity = 0;
+                setTimeout(()=>{
+                    splashScreen.classList.add('hidden')
+                },610)
+            })
+        </script>
 	</body>
 </html>
