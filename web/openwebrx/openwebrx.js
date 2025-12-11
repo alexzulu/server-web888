@@ -9926,7 +9926,6 @@ function check_suspended_audio_state()
    // If it is, then when it is clicked an attempt is made to resume() the
    // audio context that has most likely been setup by audio_init()
    // in the interim.
-   test_audio_suspended();
    try {
       window.AudioContext = window.AudioContext || window.webkitAudioContext;
       ac_play_button = new AudioContext();
