@@ -181,13 +181,6 @@ var okay_wf_init = false;
 
 function kiwi_main()
 {
-   ident_val = readCookie('ident'); // Read user ident from cookie
-   console.log('ident= ' + ident_val);
-   if (!ident_val) {
-      console.log('not identity');
-   } else {
-      console_log('identity');
-   }
    w3_do_when_cond(
       function() {
          //console.log('### '+ (owrx.cfg_loaded? 'GO' : 'WAIT') +' kiwi_main(cfg_loaded)');
@@ -236,6 +229,14 @@ function kiwi_main_ready()
 	override_9_10 = parseFloat(readCookie('last_9_10'));
 	override_max_dB = parseFloat(readCookie('last_max_dB'));
 	override_min_dB = parseFloat(readCookie('last_min_dB'));
+
+   ident_val = readCookie('ident'); // Read user ident from cookie
+   console.log('ident= ' + ident_val);
+   if (!ident_val) {
+      console.log('not identity');
+   } else {
+      console_log('identity');
+   }
    	
 	var last_vol = readCookie('last_volume', 50);
    //console.log('last_vol='+ last_vol);
