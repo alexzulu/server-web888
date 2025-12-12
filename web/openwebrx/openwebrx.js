@@ -174,6 +174,7 @@ var mobile_laptop_test = false;
 var user_url = null;
 var url_1Hz = null;
 var ident_val;
+var ident;
 
 var wf_rates = { '0':0, 'off':0, '1':1, '1hz':1, 's':2, 'slow':2, 'm':3, 'med':3, 'f':4, 'fast':4 };
 
