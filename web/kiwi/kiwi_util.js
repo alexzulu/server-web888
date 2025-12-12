@@ -217,7 +217,8 @@ function kiwi_version_cb(response_obj)
 	});
 	
 	if (kiwi_version_fail)
-	   s += '<br>'+ w3_button('w3-css-yellow', 'Continue anyway<br>Streamer, clear your browser cache!!!<br>Стример, очисти кэш браузера!!!', 'kiwi_version_continue_cb');
+	   s += '<br>'+ w3_button('w3-css-yellow', 'Continue anyway<br>Streamer, clear your browser cache!!!<br>' + 
+         'Стример, очисти кэш браузера!!!', 'kiwi_version_continue_cb');
 	
 	kiwi.conn_tstamp = isDefined(response_obj.ts)? response_obj.ts : (new Date()).getTime();
 	//console.log(response_obj);
